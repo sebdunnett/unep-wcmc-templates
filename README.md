@@ -1,5 +1,5 @@
-# unep-wcmc-templates
-A collection of R and Quarto templates with UNEP-WCMC branding.
+# UNEP-WCMC Templates
+A collection of R and Quarto templates with UNEP-WCMC branding. All feedback welcome!
 
 ## R Studio themes
 Light and dark themes using the colouring laid out in the UNEP-WCMC branding guide.
@@ -15,3 +15,5 @@ To add these themes:
 For producing presentations using Quarto that approximate the UNEP-WCMC PowerPoint styling. This makes it easier to present up-to-date results that update when the underlying data or analysis changes.
 
 To use, download the folder and modify the `.qmd` file and photos as needed.
+
+More information about producing reveal.js presentations in Quarto can be found online [here](https://quarto.org/docs/presentations/revealjs/).
