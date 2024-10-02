@@ -1,0 +1,12 @@
+version: 0.1.0
+author: Seb Dunnett
+contributes:
+  formats:
+    revealjs:
+      theme: [default,unep-wcmc.scss]
+      logo: "UNEP+WCMC_Logo-White 2019.png"
+      width: 1600
+      height: 900
+      from: markdown+emoji
+      highlight-style: pygments
+      preview-links: true

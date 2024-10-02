@@ -1,0 +1,214 @@
+/*-- scss:defaults --*/
+
+//importing fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+//fonts
+$font-family-sans-serif: 'Roboto', sans-serif !default;
+//$presentation-font-size-root: 27px !default;
+
+//colours
+$primary-blue: #00aeef;
+$secondary-blue: #4D6B89;
+$secondary-green: #42B072;
+$secondary-purple: #8B6FAF;
+$secondary-red: #EC6751;
+$secondary-yellow: #FDC742;
+$accent-dark-green: #225D52;
+$accent-dark-purple: #49529C;
+$accent-dark-red: #A72A45;
+$accent-dark-yellow: #C19024;
+
+//colours
+$body-bg: $primary-blue !default;
+$body-color: white !default;
+$link-color: white !default;
+$code-color: white !default;
+$code-bg: lighten($primary-blue,20%) !default;
+
+//headings
+$presentation-heading-font-weight: 900 !default;
+$presentation-title-slide-text-align: center !default;
+
+//icons
+$info-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-info-circle" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/> <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>');
+$warning-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-exclamation-triangle" viewBox="0 0 16 16"><path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/><path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/></svg>');
+$important-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-exclamation-circle" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/> <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>');
+$tip-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-lightbulb" viewBox="0 0 16 16"><path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/></svg>');
+
+/*-- scss:rules --*/
+
+.reveal .progress {
+  color: white !important;
+}
+
+p.date {
+  font-size: 0.8em;
+}
+
+#title-slide > div > div > div {
+  font-size: 0.9em;
+}
+
+.subtitle{
+  border-top: solid !important;
+  border-color: white !important;
+  border-top-width: 2px !important;
+  padding-top: 1.5rem;
+}
+
+.reveal .slide-logo {
+  max-height: 3rem!important;
+  z-index: 0!important;
+}
+
+.reveal .twocontent h2 {
+    width: 50%;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: white;
+}
+
+div.callout-note.callout-style-default .callout-caption {
+  background-color: lighten($secondary-blue,10%)!important;
+}
+
+div.callout-note.callout-style-default {
+  border-left-color: $secondary-blue!important;
+}
+
+div.callout-note .callout-icon::before {
+  background-image: $info-icon!important;
+}
+
+div.callout-warning.callout-style-default .callout-caption {
+  background-color: $secondary-yellow!important;
+}
+
+div.callout-warning.callout-style-default {
+  border-left-color: $secondary-yellow!important;
+}
+
+div.callout-warning .callout-icon::before {
+  background-image: $warning-icon!important;
+}
+
+div.callout-important.callout-style-default .callout-caption {
+  background-color: $secondary-red!important;
+}
+
+div.callout-important.callout-style-default {
+  border-left-color: $secondary-red!important;
+}
+
+div.callout-important .callout-icon::before {
+  background-image: $important-icon!important;
+}
+
+div.callout-tip.callout-style-default .callout-caption {
+  background-color: $secondary-green!important;
+}
+
+div.callout-tip.callout-style-default {
+  border-left-color: $secondary-green!important;
+}
+
+div.callout-tip .callout-icon::before {
+  background-image: $tip-icon!important;
+}
+
+.bottom hr {
+  border: none;
+  height: 2px;
+  background-color: white;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  bottom: 7%;
+}
+
+.twocontent hr {
+  border: none;
+  height: 2px;
+  background-color: white;
+  width: 50%;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+}
+
+.reveal .toc h2 {
+    position: absolute;
+    left: 50%;
+}
+
+.toc .column {
+  padding-bottom: 100vh;
+}
+
+body > div.reveal.has-logo.focused.has-vertical-slides.has-horizontal-slides.ready.none > div.backgrounds > div.slide-background.stack.present > div.slide-background.slide.level2.green.present > div {
+  background-color: $accent-dark-green;
+}
+
+body > div.reveal.has-logo.focused.has-vertical-slides.has-horizontal-slides.ready.none > div.backgrounds > div.slide-background.stack.present > div.slide-background.slide.level2.purple.present > div {
+  background-color: $accent-dark-purple;
+}
+
+body > div.reveal.has-logo.focused.has-vertical-slides.has-horizontal-slides.ready.none > div.backgrounds > div.slide-background.stack.present > div.slide-background.slide.level2.red.present > div {
+  background-color: $accent-dark-red;
+}
+
+body > div.reveal.has-logo.focused.has-vertical-slides.has-horizontal-slides.ready.none > div.backgrounds > div.slide-background.stack.present > div.slide-background.slide.level2.yellow.present > div {
+  background-color: $accent-dark-yellow;
+}
+
+.red a, .green a, .purple a, .yellow a {
+  color: $primary-blue!important;
+}
+
+.reveal .slides a {
+  text-decoration: underline;
+}
+
+.reveal .slide blockquote {
+  border-color: $secondary-blue;
+}
+
+.red blockquote,
+.green blockquote,
+.purple blockquote,
+.yellow blockquote {
+  border-color: $primary-blue!important;
+}
+
+.textbox {
+  border-color: white;
+  border-width: thin;
+  border: solid;
+  background-color: rgba(0, 174, 239, .5);
+  font-size: 53px;
+  font-weight: 900;
+  text-align: center;
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  top: 44%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.panel-tabset li a {
+  background-color: lighten($secondary-blue,20%)!important;
+  text-decoration: none!important;
+  font-weight: bold!important;
+}
+
+//.panel-tabset .tab-content {
+//  background-color: lighten($secondary-blue,20%)!important;
+//}

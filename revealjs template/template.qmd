@@ -1,0 +1,477 @@
+---
+title: Your Title Here
+subtitle: Your Subtitle Here
+author: Your Name Here
+contact: NameSurname@unep-wcmc.org
+date: today
+date-format: long
+title-slide-attributes:
+  data-background-image: "madeira.jpg"
+  data-background-opacity: "0.25"
+format: unep-wcmc-revealjs
+embed-resources: true
+---
+
+##  {.toc background-image="monteverde.jpg"}
+
+::: columns
+::: {.column width="50%"}
+:::
+
+::: {.column width="25%" style="background-color: rgba(0, 174, 239, .75)"}
+::: {style="text-align: center"}
+[Contents:]{style="font-size: 1.6em; font-weight: 600; border-bottom: thin"}
+
+---
+
+:::{.incremental}
+1. General guidance
+2. Changing backgrounds
+3. Images / graphics
+4. Main body slides
+5. Alternate colours
+6. Closing slides
+:::
+
+:::
+:::
+
+::: {.column width="25%"}
+:::
+:::
+
+# General guidance
+
+## How to use this slide deck
+
+::::{.panel-tabset}
+
+### Advice on Colour
+
+:::{.smaller}
+There are some slides in this template that use a different colour palette. We suggest that if your presentation is short, using colours other than blue is not necessary. If the presentation is long enough to be broken up into clear sections, however, we encourage that the sections are also defined by their own colours. Please do not intermix different coloured slides in a single section, it just makes it look messy and unclear. We ask that in all cases, your opening and closing slides are still in the default blue.
+:::
+
+### Advice on Text
+
+:::{.smaller}
+We strongly advise that text is as limited as possible across the board. It is, generally speaking, much more engaging to the viewer if the slide shows only key points / images / graphics, and the explanation is done entirely verbally. If the session is long and information heavy, or you just want the viewers to take as much in as possible, it may also be useful to send more detailed thoughts on the subject matter in document form before / after the presentation.
+:::
+
+::::
+
+# Changing backgrounds
+
+##
+
+The background image of the title slide is set by the following YAML arguments:
+
+```yaml
+title-slide-attributes:
+  data-background-image: "path_to_image.jpg"
+  data-background-opacity: "0.25"
+```
+
+Otherwise background images are set by adding attributes to section headers, like `## Test {background-image="path_to_image.jpg" background-opacity=0.25}`.
+
+The opacity may need to be adjusted depending on the brightness/contrast of the selected image.
+
+# Images / graphics
+
+##
+
+You can replace the images in this template with the path of the image *relative* to the `.qmd` file.
+
+Otherwise images *can* be imported directly from an Internet library like [Unsplash](https://unsplash.com/).
+
+::::{.columns}
+:::{.column width="33%"}
+![From local directory (copied from WCMC Media library)](nepal.jpg){width="50%" fig-align="left"}
+:::
+:::{.column width="33%"}
+![From [martin bennie](https://unsplash.com/@martinbennie) on Unsplash](https://images.unsplash.com/photo-1666627830631-4e3d18bb9f73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80){width="50%" fig-align="left"}
+:::
+:::{.column width="33%"}
+![GIF URLs can also be used](https://media.giphy.com/media/QMHoU66sBXqqLqYvGO/giphy.gif)
+:::
+::::
+
+:::{.callout-warning}
+**n.b.** always credit people as you would want to be credited!
+:::
+
+# Main body slides
+
+## Background images {.twocontent background-image="elephant.jpg" background-size="45% auto" background-position="right"}
+
+::: columns
+::: {.column width="55%"}
+
+> The variability among living organisms from all sources, including, inter alia, terrestrial, marine and other aquatic ecosystems and the ecological complexes of which they are part; this includes diversity within species, between species and of ecosystems.
+
+:::
+
+::: {.column width="45%"}
+:::
+:::
+
+::: bottom
+
+------------------------------------------------------------------------
+:::
+
+::: {.footer style="width:50%"}
+*Convention on Biological Diversity (1992) Article 2*
+:::
+
+<!-- can be done this way with local files if you don't need to embed resources. multiple backgrounds don't embed properly and is a known bug with quarto cli
+## Slide Title Here{background-image="madeira.jpg, monteverde.jpg, taiga.jpg" background-size="50% 50%,50% 50%,50% 50%" background-position="top right,bottom left,bottom right"}
+-->
+
+## Slide Title Here{background-image="background3pic.png"}
+
+Insert [un-bulleted]{.fragment .highlight-red} points here
+
+:::{.fragment .fade-in}
+:::{.fragment .semi-fade-out}
+And here
+:::
+:::
+
+:::{.fragment .fade-up}
+etc.
+:::
+
+## {background-image="background4pic.png"}
+
+:::{.textbox}
+Slide Title Here
+:::
+
+## Slide Title Here {style="text-align: center"}
+
+<hr>
+
+This is a full paragraph slide^[Note how boring this slide was to read. That is how your slide may be perceived by your audience should you use one too!] for the rare occasions you may wish to convey heavy amounts information on a slide. We advise against this and note that if you must use one of these slides in a presentation, to only do it once if possible. If more than one of these slides are required in one presentation, we strongly suggest breaking them up with images, other slides ETC.
+
+It is possible to use graphics and indicators on one of these slides to break the monotony or convey key points. Such as the ones below that indicate our wordcount suggestions for one of these such slides.
+
+::: columns
+::: {.column width="33%"}
+::: callout-note
+Preferred Word Count: **100**
+:::
+:::
+
+::: {.column width="33%"}
+::: callout-warning
+Preferred Word Count: **150**
+:::
+:::
+
+::: {.column width="33%"}
+::: callout-important
+Preferred Word Count: **175**
+:::
+:::
+:::
+
+## Coding
+
+:::{.callout-tip}
+You can include code using `#| echo: true` at the beginning of your code chunk.
+:::
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "|1|3|4,5,6"
+#| echo: true
+library(ggplot2)
+
+mtcars |> 
+  ggplot(aes(x = disp, y = mpg)) +
+  geom_point() +
+  geom_smooth(method = "loess", formula = "y~x")
+```
+
+::: aside
+This is an aside.
+:::
+
+::: footer
+This is a citation for the page, most useful for references.
+:::
+
+## Font Awesome {{< fa font-awesome >}}
+
+Included in this slide template is the ability to use icons from the `Font Awesome` library.
+
+Icons can be written with shortcode, for example: `{{{< fa building-un >}}}` gives {{< fa building-un >}}
+
+::: {.panel-tabset}
+
+### Sizing
+
+Sizing can be achieved with the `size` argument (more [here](https://github.com/quarto-ext/fontawesome#user-content-fn-1-d08d1b637ed60d4b05ff62afbd304110)).
+
+:::{style="bottom-border-style: solid"}
+| Sizing Command             | LaTeX                 | HTML             | Icon                                   |
+|----------------------------|-----------------------|------------------|----------------------------------------|
+| tiny                       | 5pt (= \\tiny)        | 0.5em            | {{< fa building-un size=tiny >}}       |
+| normalsize                 | 10pt (= \\normalsize) | 1em              | {{< fa building-un size=normalsize >}} |
+| large                      | 12pt (= \\large)      | 1.25em           | {{< fa building-un size=large >}}      |
+:::
+
+### Colouring
+
+Colour can be added by using the following syntax:
+
+* `[{{{< fa building-un >}}}]{style="color: #FDC742"}` [{{< fa building-un >}}]{style="color: #FDC742"}
+* `[{{{< fa building-un >}}}]{style="color: #8B6FAF"}` [{{< fa building-un >}}]{style="color: #8B6FAF"}
+* `[{{{< fa building-un >}}}]{style="color: #42B072"}` [{{< fa building-un >}}]{style="color: #42B072"}
+
+:::
+
+## Emojis :wave:
+
+Emojis are accessed with `:bug:` :bug:
+
+The full list of available emojis is available [here](https://gist.github.com/rxaviers/7360908).
+
+# Alternate colours
+
+## Background images {.twocontent .green background-image="elephant.jpg" background-size="45% auto" background-position="right"}
+
+::: columns
+::: {.column width="55%"}
+
+> The variability among living organisms from all sources, including, inter alia, terrestrial, marine and other aquatic ecosystems and the ecological complexes of which they are part; this includes diversity within species, between species and of ecosystems.
+
+*Convention on Biological Diversity (1992)*
+
+*Article 2*
+
+:::
+
+::: {.column width="45%"}
+:::
+:::
+
+::: bottom
+
+------------------------------------------------------------------------
+:::
+
+## Slide Title Here {.green style="text-align: center"}
+
+<hr>
+
+This is a full paragraph slide for the rare occasions you may wish to convey heavy amounts information on a slide. We advise against this and note that if you must use one of these slides in a presentation, to only do it once if possible. If more than one of these slides are required in one presentation, we strongly suggest breaking them up with images, other slides ETC.
+
+It is possible to use graphics and indicators on one of these slides to break the monotony or convey key points. Such as the ones below that indicate our wordcount suggestions for one of these such slides.
+
+::: columns
+::: {.column width="33%"}
+::: callout-note
+Preferred Word Count: **100**
+:::
+:::
+
+::: {.column width="33%"}
+::: callout-warning
+Preferred Word Count: **150**
+:::
+:::
+
+::: {.column width="33%"}
+::: callout-important
+Preferred Word Count: **175**
+:::
+:::
+:::
+
+Note how boring this slide was to read. That is how your slide may be perceived by your audience should you use one too!
+
+## Background images {.twocontent .purple background-image="elephant.jpg" background-size="45% auto" background-position="right"}
+
+::: columns
+::: {.column width="55%"}
+
+> The variability among living organisms from all sources, including, inter alia, terrestrial, marine and other aquatic ecosystems and the ecological complexes of which they are part; this includes diversity within species, between species and of ecosystems.
+
+*Convention on Biological Diversity (1992)*
+
+*Article 2*
+
+:::
+
+::: {.column width="45%"}
+:::
+:::
+
+::: bottom
+
+------------------------------------------------------------------------
+:::
+
+## Slide Title Here {.purple style="text-align: center"}
+
+<hr>
+
+This is a full paragraph slide for the rare occasions you may wish to convey heavy amounts information on a slide. We advise against this and note that if you must use one of these slides in a presentation, to only do it once if possible. If more than one of these slides are required in one presentation, we strongly suggest breaking them up with images, other slides ETC.
+
+It is possible to use graphics and indicators on one of these slides to break the monotony or convey key points. Such as the ones below that indicate our wordcount suggestions for one of these such slides.
+
+::: columns
+::: {.column width="33%"}
+::: callout-note
+Preferred Word Count: **100**
+:::
+:::
+
+::: {.column width="33%"}
+::: callout-warning
+Preferred Word Count: **150**
+:::
+:::
+
+::: {.column width="33%"}
+::: callout-important
+Preferred Word Count: **175**
+:::
+:::
+:::
+
+Note how boring this slide was to read. That is how your slide may be perceived by your audience should you use one too!
+
+## Background images {.twocontent .red background-image="elephant.jpg" background-size="45% auto" background-position="right"}
+
+::: columns
+::: {.column width="55%"}
+
+> The variability among living organisms from all sources, including, inter alia, terrestrial, marine and other aquatic ecosystems and the ecological complexes of which they are part; this includes diversity within species, between species and of ecosystems.
+
+*Convention on Biological Diversity (1992)*
+
+*Article 2*
+
+:::
+
+::: {.column width="45%"}
+:::
+:::
+
+::: bottom
+
+------------------------------------------------------------------------
+:::
+
+## Slide Title Here {.red style="text-align: center"}
+
+<hr>
+
+This is a full paragraph slide for the rare occasions you may wish to convey heavy amounts information on a slide. We advise against this and note that if you must use one of these slides in a presentation, to only do it once if possible. If more than one of these slides are required in one presentation, we strongly suggest breaking them up with images, other slides ETC.
+
+It is possible to use graphics and indicators on one of these slides to break the monotony or convey key points. Such as the ones below that indicate our wordcount suggestions for one of these such slides.
+
+::: columns
+::: {.column width="33%"}
+::: callout-note
+Preferred Word Count: **100**
+:::
+:::
+
+::: {.column width="33%"}
+::: callout-warning
+Preferred Word Count: **150**
+:::
+:::
+
+::: {.column width="33%"}
+::: callout-important
+Preferred Word Count: **175**
+:::
+:::
+:::
+
+Note how boring this slide was to read. That is how your slide may be perceived by your audience should you use one too!
+
+## Background images {.twocontent .yellow background-image="elephant.jpg" background-size="45% auto" background-position="right"}
+
+::: columns
+::: {.column width="55%"}
+
+> The variability among living organisms from all sources, including, inter alia, terrestrial, marine and other aquatic ecosystems and the ecological complexes of which they are part; this includes diversity within species, between species and of ecosystems.
+
+*Convention on Biological Diversity (1992)*
+
+*Article 2*
+
+:::
+
+::: {.column width="45%"}
+:::
+:::
+
+::: bottom
+
+------------------------------------------------------------------------
+:::
+
+## Slide Title Here {.yellow style="text-align: center"}
+
+<hr>
+
+This is a full paragraph slide for the rare occasions you may wish to convey heavy amounts information on a slide. We advise against this and note that if you must use one of these slides in a presentation, to only do it once if possible. If more than one of these slides are required in one presentation, we strongly suggest breaking them up with images, other slides ETC.
+
+It is possible to use graphics and indicators on one of these slides to break the monotony or convey key points. Such as the ones below that indicate our wordcount suggestions for one of these such slides.
+
+::: columns
+::: {.column width="33%"}
+::: callout-note
+Preferred Word Count: **100**
+:::
+:::
+
+::: {.column width="33%"}
+::: callout-warning
+Preferred Word Count: **150**
+:::
+:::
+
+::: {.column width="33%"}
+::: callout-important
+Preferred Word Count: **175**
+:::
+:::
+:::
+
+Note how boring this slide was to read. That is how your slide may be perceived by your audience should you use one too!
+
+# Closing slides
+
+##  {background-image="taiga.jpg" background-opacity="0.25"}
+
+::::::{style="text-align: center"}
+
+:::::{.columns}
+:::{.column width="15%"}
+:::
+
+:::{.column width="70%"}
+
+::: {layout="[[-1], [-1], [-1], [-1], [1], [-1]]"}
+
+![](_extensions/unep-wcmc/UNEP+WCMC_Logo-White 2019.png)
+
+:::
+
+Contact: [{{< meta contact >}}](mailto:%7B%7B%3C%20meta%20contact%20%3E%7D%7D) [{{< fa brands twitter >}}](https://twitter.com/unepwcmc) [{{< fa brands linkedin >}}](https://www.linkedin.com/company/unepwcmc/) [{{< fa globe >}}](https://www.unep-wcmc.org)
+
+:::
+
+:::{.column width="15%"}
+:::
+:::::
+
+::::::
